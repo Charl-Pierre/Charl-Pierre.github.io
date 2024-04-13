@@ -1,8 +1,8 @@
 {
-  "name": "pokemon-higher-or-lower",
-  "version": "0.2.0",
+  "name": "Charl-Pierre Marais",
+  "version": "0.1.0",
   "private": false,
-  "homepage": "https://charl-pierre.github.io/pokemon-higher-or-lower",
+  "homepage": "https://charl-pierre.github.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
