@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pokemon-higher-or-lower/static/css/main.ddd8f091.css",
+    "main.js": "/pokemon-higher-or-lower/static/js/main.2ecc84bd.js",
+    "static/js/787.b916d5cc.chunk.js": "/pokemon-higher-or-lower/static/js/787.b916d5cc.chunk.js",
+    "index.html": "/pokemon-higher-or-lower/index.html",
+    "main.ddd8f091.css.map": "/pokemon-higher-or-lower/static/css/main.ddd8f091.css.map",
+    "main.2ecc84bd.js.map": "/pokemon-higher-or-lower/static/js/main.2ecc84bd.js.map",
+    "787.b916d5cc.chunk.js.map": "/pokemon-higher-or-lower/static/js/787.b916d5cc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ddd8f091.css",
+    "static/js/main.2ecc84bd.js"
+  ]
+}
