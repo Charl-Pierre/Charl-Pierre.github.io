@@ -45,9 +45,9 @@ export default function ProjectSection({ title, description, categories, technol
         {/* Tooltip displaying the technologies used in a project */}
         <label className='tooltip'>
           {tooltip}
-          <div className='tooltiptext'>
+          <span className='tooltiptext'>
             {technologies && tooltiptext}
-          </div>
+          </span>
         </label>
 
         {/* Link to project's external page */}
