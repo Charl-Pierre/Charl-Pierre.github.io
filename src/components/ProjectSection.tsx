@@ -20,12 +20,12 @@ export default function ProjectSection({ title, description, categories, technol
       tooltip.push(<TechIcon tech={technologies[i]}/>)
     }
     if (technologies.length > 3) //Add "(+n)" if more than three technologies given
-      tooltip.push(<b className='outline rounded-xl p-0.5 m-1 ml-1.5 outline-2'>+{technologies.length-3}</b>)
+      tooltip.push(<b className='outline outline-2 outline-offset-[-1px] rounded-xl p-0.5 m-1 ml-1.5 text-[16px] bg-white text-gray-800 outline-white'>+{technologies.length-3}</b>)
 
     //Tooltiptext
     for (let i = 0; i < technologies.length; i++){
       tooltiptext.push(<>
-      <TechIcon tech={technologies[i]}/> {technologies[i]}<br/>
+        <TechIcon tech={technologies[i]}/> {technologies[i]}<br/>
       </>)
     }
   }

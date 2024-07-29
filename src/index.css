@@ -107,7 +107,7 @@ code {
   align-items: center;
   flex-wrap: wrap;
   display: flex;
-  word-wrap: break-word;
+  /* word-wrap: break-word; */
   flex-direction: column;
   z-index: 0;
   position: relative;
@@ -115,7 +115,7 @@ code {
 
 .section {
   background-color: #2b73a0;
-  background: linear-gradient(51deg, rgb(43, 115, 160) 0%, rgba(8,64,154,1) 100%);
+  background: linear-gradient(51deg, rgba(43, 115, 160, 0.349) 0%, rgba(10, 74, 179, 0.712) 100%);
   position: relative;
 }
 
@@ -166,6 +166,9 @@ code {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   z-index: 11;
+  opacity: 0;
+  animation: fadeIn 0.2s;
+  animation-fill-mode: forwards;
 }
 
 

@@ -12,7 +12,7 @@ export default function TechIcon({tech} : {tech?: string}){
     //Remove the leading '$' from the filepath
     iconString = iconString.substring(1)
     return(
-      <span><img alt="?" src={iconString} className='w-[24px] inline'/></span>
+      <span><img alt="?" src={iconString} className='w-[32px] inline'/></span>
     )
   }
 
@@ -39,5 +39,6 @@ var Technologies : { [key: string]: string} = {
   "github": "github-original",
   "github pages": "github-original",
   "gamemaker studio": "$images/gmslogo.png",
+  "nunit": "$images/nunitlogo.png",
   "express": "express-original"
 }

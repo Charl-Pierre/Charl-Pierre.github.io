@@ -13,7 +13,7 @@ function App() {
     
         // Default settings
         {
-            "highlighted": false,
+            "highlighted": true,
             "game": false,
             "website": false,
             "ai": false,
@@ -30,12 +30,12 @@ function App() {
         <div className='container flex-col h-[90vh] justify-center box-border content-center items-center max-w-[100vw] flex-wrap'>
 
                   
-          <div className='title uppercase text-4xl text-center font-bold mb-8'>
+          <div className='title uppercase text-3xl sm:text-4xl text-center font-bold mb-8 mx-4'>
               Hi, I'm Charl-Pierre  <br/>
               But you can call me Charlie    
           </div>
 
-          <div className='subtitle text-2xl text-center font-semibold'>
+          <div className='subtitle text-2xl text-center font-semibold mx-4'>
             I'm a software engineer and game developer. Interested in&nbsp;
             <HashLink className='font-medium text-blue-300 dark:text-blue-300 hover:underline' smooth to="#whoami">who I am </HashLink>
             or&nbsp;
@@ -52,14 +52,14 @@ function App() {
       </div>
 
       {/* --PERSONAL INTRODUCTION-- */}
-      <div id='whoami' className='sections_container m-8'>
+      <div id='whoami' className='sections_container m-8 p-4'>
         <div className='text-4xl text-center font-bold mb-4'>Who am I?</div>
           im charlie and im really cool
       </div>
       
 
       {/* --PROJECTS-- */}
-      <div id="projects" className='z-0 sections_container m-8'>
+      <div id="projects" className='z-0 sections_container sm:m-8 p-4'>
         <div className='text-4xl text-center font-bold mb-4'>Projects</div>
 
         

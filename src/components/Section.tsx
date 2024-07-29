@@ -15,12 +15,12 @@ function Section(props : any) {
   }
 
   return (
-    <div id={props.id} className={`flex m-4 w-[60vw] relative ${justification} ${props.className}`}>
-      <div className='relative'>
+    <div id={props.id} className={`flex sm:mx-8 my-8 w-[85vw] sm:w-[60vw] relative ${justification} ${props.className}`}>
+      <div>
         <p className={`text-3xl mb-1 ${titleAlign}`}>
           {props.header}
         </p>
-        <div className={'section rounded-2xl max-w-[90vw] sm:max-w-[50vw] p-4 relative'}>
+        <div className={'section rounded-2xl max-w-[85vw] sm:max-w-[50vw] p-4 relative'}>
           {props.children}
         </div>
       </div>
