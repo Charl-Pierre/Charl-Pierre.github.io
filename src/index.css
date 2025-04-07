@@ -14,6 +14,10 @@ html, body, #root {
   
 }
 
+p {
+  margin-bottom: 8px;
+}
+
 body {
   color: #d1d1d1;
   background: #1d1d20;
@@ -125,6 +129,13 @@ code {
   animation-fill-mode: forwards;
 }
 
+.temp {
+  opacity: 1;
+  animation: fadeIn 1s 3s;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+}
+
 .subtitle {
   opacity: 0;
   animation: fadeIn 1s 2s;
@@ -185,7 +196,6 @@ code {
 }
 
 .wave {
-  bottom: -16vh;
   --size: 3vw;
   --m: 1;
   --p: calc(var(--m)*var(--size));
@@ -209,9 +219,17 @@ code {
   background:#1d1d20;;
 }
 
-.gamemaker {
-  background: url("https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/133.png");
+.progress {
   height: 20px;
-  width: 20px;
-  display: inline-flex;
+  border-radius: 10px;
+  width: 100%;
+}
+progress[value]::-webkit-progress-bar {
+  background-color: #3d3d44;
+  border-radius: 8px;
+}
+
+progress[value]::-webkit-progress-value {
+  border-radius: 8px;
+  background-color:#4584ac;
 }

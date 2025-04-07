@@ -16,6 +16,22 @@ export type ProjectProps = {
 
 const Projects: ProjectProps[] = [
     {
+        title: "Caribbean Climb",
+        year: 2024,
+        categories: ["game", "highlighted"],
+        technologies: ["Unity", "CSharp", "Git"],
+        body:
+        <div className="overflow-hidden">
+            Made for the 2024 GMTK Game Jam, Caribbean Climb is a 2D platformer about climbing a lighthouse while trying to outrun the rising, shark-filled sea level. 
+            The game features a random level generation, the ability to build your own path and an online leaderboard.&nbsp; 
+            <img src={"images/caribbeanclimb.png"} alt="A gameplay screenshot from Caribbean Climb" className="clearfix overflow-auto sm:float-right clear-right w-[70vw] sm:w-2/5 rounded-md m-4 ml-2"/>
+            <br/>
+            <i>Of the 8,000 submissions, our game placed 70th in Style and 91st overall.</i>
+            <iframe title="Caribbean Climb" src="https://itch.io/embed/2910284?dark=true" className="rounded-md mt-4 w-[208px] sm:w-[510px] h-[167px]"><a href="https://drepple.itch.io/caribbean-climb">Caribbean Climb by Drepple, Charlie, Buse_cnc</a></iframe>
+        </div>,
+        url: "https://drepple.itch.io/caribbean-climb",
+    },
+    {
         title: "Unusual Suspects",
         year: 2023,
         categories: ["highlighted", "tool", "website", "ai"],
@@ -42,7 +58,7 @@ const Projects: ProjectProps[] = [
     {
         title: "RESTACKED",
         year: 2022,
-        categories: ["game", "highlighted"],
+        categories: ["game"],
         technologies: ["CSharp"],
         body: 
         <div className="overflow-hidden">
@@ -59,11 +75,11 @@ const Projects: ProjectProps[] = [
     {
         title: "The Cycle",
         year: 2024,
-        categories: ["other"],
+        categories: ["other", "highlighted"],
         technologies: ["Blender"],
         body:
         <div className="overflow-hidden">
-            <iframe title="The Cycle" className="clearfix overflow-auto float-right clear-right w-[55vw] sm:w-3/5 aspect-video ml-2 rounded-md" allowFullScreen
+            <iframe title="The Cycle" className="clearfix overflow-auto sm:float-right clear-right w-[70vw] sm:w-3/5 aspect-video m-2 rounded-md" allowFullScreen
                 src="https://www.youtube.com/embed/rq4LM_uPvGA?si=6sRDKiHDs9bbshYT">
             </iframe>
             The Cycle is a short film made for the Computer Animation course of my Game & Media Technology master. 
@@ -94,7 +110,7 @@ const Projects: ProjectProps[] = [
         body:
         <div className="overflow-hidden">
             First Aid Fever is a serious game aimed at teaching first aid techniques to novices. 
-            The game engages players through interactive levels that simulate medical emergencies, requiring them to use first aid tools. 
+            The game engages players through interactive levels that simulate medical emergencies, requiring them to use first aid tools.&nbsp; 
             <img src={"images/firstaidfever.png"} alt="A gameplay screenshot from First Aid Fever" className="clearfix overflow-auto sm:float-right clear-right w-[70vw] sm:w-2/5 rounded-md m-4 ml-2"/>
             As players advance, they face increasing time constraints, promoting the memorization of correct procedures.
             The accompanying research showed that First Aid Fever's methodology is effective at gamified learning and improving knowledge retention.
@@ -120,6 +136,7 @@ const Projects: ProjectProps[] = [
     },
     {
         title: "Computer Vision",
+        categories: ["hidden"],
         description: "WIP",
         technologies: ["Python", "OpenCV", "NumPy"]
     },
@@ -138,6 +155,7 @@ const Projects: ProjectProps[] = [
     },
     {
         title: "Nick-n-Chick",
+        categories: ["hidden"],
         description: "WIP",
         technologies: ["HTML5", "Express", "SQLite", "HTML5", "CSS3", "JavaScript"]
     },
