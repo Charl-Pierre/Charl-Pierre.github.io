@@ -28,14 +28,14 @@ function SkillList(title : string, skills : SkillProps[]){
 
 export default function SkillsSection(){
   return (
-    <div className={"table clear-both w-[85vw] sm:w-[60vw]"}>
-      <div className={"float-left p-4 sm:w-1/3 w-full"}>
+    <div className={"table clear-both w-[85vw] sm:w-[60vw] z-0"}>
+      <div className={"float-left z-0 p-4 sm:w-1/3 w-full"}>
       {SkillList("Programming Languages", ProgrammingLanguages)}
       </div>
-      <div className={"float-left p-4 sm:w-1/3 w-full"}>
+      <div className={"float-left z-0 p-4 sm:w-1/3 w-full"}>
       {SkillList("Languages", Languages)}
       </div>
-      <div className={"float-left p-4 sm:w-1/3 w-full"}>
+      <div className={"float-left z-0 p-4 sm:w-1/3 w-full"}>
       {SkillList("Other", Miscellaneous)}
       </div>
     </div>

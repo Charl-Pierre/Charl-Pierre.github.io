@@ -152,6 +152,55 @@ code {
   100% { opacity: 1; }
 }
 
+.filterButton {
+  background-color: #2b73a0;
+  background: linear-gradient(51deg, rgba(49, 155, 197, 0.479) 0%, rgba(14, 90, 212, 0.76) 100%);
+  animation: introduceButton .25s;
+}
+
+.filterButton:hover{
+  background: linear-gradient(51deg, rgba(34, 159, 168, 0.788) 0%, rgba(90, 141, 223, 0.952)100%);
+}
+
+.filterButton input[type="checkbox"]{
+  -webkit-appearance: initial;
+  appearance: initial;
+  /* background: gray; */
+  width: 20px;
+  height: 20px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.filterButton input[type="checkbox"]:after{
+  content: "❌";
+  color:transparent;
+  text-shadow: 0 0 0 rgb(255, 255, 255);
+  font-size: large;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.filterButton input[type="checkbox"]:checked:after{
+  content: "✔️";
+}
+
+@keyframes introduceButton{
+  from{
+      transform: scaleX(0);
+
+  }
+  to{
+      transform: scaleX(1);
+  }
+}
+
 .tooltip {
   position: relative;
 }

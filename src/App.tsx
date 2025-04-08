@@ -11,13 +11,13 @@ import SkillsSection from './components/SkillsSection';
 
 function App() { 
 
-  const showFilter = false;
+  const [showFilter, setShowFilter] = useState<boolean>(false);
 
   const [projectFilters, setProjectFilters] = useState<FiltersType>( 
     
     // Default settings
     {
-        "highlighted": showFilter,
+        "highlighted": false,
         "game": false,
         "website": false,
         "ai": false,
@@ -50,9 +50,9 @@ function App() {
           </div>
           
           {/* Temporary */}
-          <div className='text-center items-center justify-center flex absolute bottom-0 w-full temp'>
+          {/* <div className='text-center items-center justify-center flex absolute bottom-0 w-full temp'>
             <Section>This page is still under construction :p</Section>
-          </div>
+          </div> */}
 
           <div className='text-center items-center justify-center flex bottom-4 right-4 absolute float-right text-xl'>
             <HashLink className='font-medium text-blue-300 dark:text-blue-300 hover:underline' smooth to="#contact">Contact</HashLink>
@@ -98,12 +98,14 @@ function App() {
         {/* Filter buttons */}
         <div className="sm:flex">
           {showFilter && Object.keys(projectFilters).map((key) => {
+            var value = projectFilters[key as keyof FiltersType]
             return(
               <Checkbox 
                 key={key} 
-                className="flex flex-col sm:flex-row gap-2 capitalize" 
+                className={"flex flex-col sm:flex-row gap-2 capitalize border-[1px] " + 
+                  ((key === 'highlighted' && value) ? "border-yellow-300" : "border-transparent")}
                 label={key === 'ai' ? 'AI' : key} 
-                value={projectFilters[key as keyof FiltersType]}
+                value={value}
                  onChange={(value : boolean)=>{
                   setProjectFilters({
                     ...projectFilters,
@@ -111,6 +113,15 @@ function App() {
                   })
                 }}/>
           )})}
+          <Checkbox
+            className="flex flex-col sm:flex-row gap-2 capitalize"
+            label={showFilter ? "Hide" : "Show filters"}
+            value={showFilter}
+            showIcon={false}
+            onChange={(value : boolean) => {
+              setShowFilter(value)
+            }}
+          />
         </div>
        
         
@@ -120,7 +131,8 @@ function App() {
             return false;
 
           if (projectFilters && Object.keys(projectFilters).some((f) => projectFilters[f as keyof FiltersType] === true))
-            if (!item.categories || !item.categories.some((cat) => projectFilters[cat as keyof FiltersType] === true)) 
+            if (!item.categories || !Object.keys(projectFilters).filter((f) => projectFilters[f as keyof FiltersType] === true)
+              .every((cat) => item.categories?.includes(cat)))
               return false;
           return true
         })
@@ -131,13 +143,13 @@ function App() {
       </div>
 
       {/* --SKILLS-- */}
-      <div id='skills' className='sections_container sm:m-8 p-4'>
+      <div id='skills' className='z-0 sections_container sm:m-8 p-4'>
         <div className='text-4xl text-center font-bold mb-4'>Skills</div>
         <SkillsSection/>
       </div>
 
       {/* --CONTACT-- */}
-      <div id='contact' className='sections_container sm:m-8 p-4'>
+      <div id='contact' className='z-0 sections_container sm:m-8 p-4'>
         <div className='text-4xl text-center font-bold mb-4'>Contact</div>
         <div className='w-[85vw] sm:w-[60vw] text-center justify-center'>
           You can access my CV&nbsp; 

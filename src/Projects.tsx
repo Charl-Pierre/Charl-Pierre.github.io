@@ -9,6 +9,7 @@ export type ProjectProps = {
     categories?: string[];
     body?: JSX.Element;
     technologies?: string[];
+    visible?: boolean; //This is only added during rendering to optimize filtering
     align?: string; //This is only added during rendering to alternate alignment side
   }
 
@@ -135,12 +136,6 @@ const Projects: ProjectProps[] = [
         </div>
     },
     {
-        title: "Computer Vision",
-        categories: ["hidden"],
-        description: "WIP",
-        technologies: ["Python", "OpenCV", "NumPy"]
-    },
-    {
         title: "Nonogram Solver",
         year: 2022,
         categories: ["tool"],
@@ -155,9 +150,22 @@ const Projects: ProjectProps[] = [
     },
     {
         title: "Nick-n-Chick",
-        categories: ["hidden"],
-        description: "WIP",
+        categories: ["hidden", "website"],
+        body:
+        <>
+        <img src={"images/nicknchick.png"} alt="A screenshot of the Nick-n-Chick website" className="clearfix overflow-auto sm:float-right clear-right w-[70vw] sm:w-1/4 rounded-md m-4 ml-2"/>
+        Nick-n-Chick was a website made alongside two friends (one of which being the titular Nick) meant to be a parody of KFC. 
+        The website featured an extensive menu of fake meals and marketing as well as a fully functional "webshop".
+        The webshop allowed users to register accounts, fill their shopping carts and place orders, all of which is stored in an SQL database.
+        
+        </>,
         technologies: ["HTML5", "Express", "SQLite", "HTML5", "CSS3", "JavaScript"]
+    },
+    {
+        title: "Computer Vision",
+        categories: ["hidden"],
+        description: "Description not yet available",
+        technologies: ["Python", "OpenCV", "NumPy"]
     },
     
 
